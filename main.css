@@ -1,18 +1,28 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&family=Poppins:wght@600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 /* variables CSS */
 :root{
     --header-height: 3rem;
 
     /* Colors */
+        /* Teal and orange colors */
+        --teal-color: #6575a2;
+        --orange-color: #3586ff;
+    
+        /* Background and button colors */
+        --background-color-light: #f0f0f0; /* Light background */
+        --background-color-dark: #a0bded; /* Dark background */
+        --button-color-light: var(--orange-color); /* Button color for light mode */
+        --button-color-dark: var(--teal-color); /* Button color for dark mode */
+    
     /* change favourite color */
     --hue-color: 233; /*purple 250 - green 142 - blue 230 - pink340 */
 
     /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color: var(--teal-color);
+    --first-color-second: var(--teal-color);
+    --first-color-alt: var(--orange-color);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
@@ -24,7 +34,7 @@
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     
     /* =============== font and typo ============== */
-    --body-font: 'poppins', sans-serif;
+    --body-font: 'Poppins', sans-serif;
     --big-font-size: 2 rem;
     --h1-font-size: 1.5 rem;
     --h2-font-size: 1.25 rem;
@@ -67,7 +77,7 @@
 /* ========== variable dark theme ========== */
 body.dark-theme{
     /* HSL color mode */
-    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --first-color-second: var(--background-color-dark);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
     --input-color: hsl(var(--hue-color), 29%, 16%);
@@ -417,34 +427,34 @@ img{
     background-color: var(--first-color);
 }
 .skills_html{
-    width: 80%;
+    width: 100%;
 }
 .skills_css{
-    width: 70%;
+    width: 85%;
 }
 .skills_js{
-    width: 60%;
+    width: 80%;
 }
 .skills_drupal{
-    width: 60%;
+    width: 90%;
 }
 .skills_bootstrap{
-    width: 65%;
+    width: 85%;
 }
 .skills_photoshop{
-    width: 60%;
+    width: 70%;
 }
 .skills_illustrator{
     width: 65%;
 }
 .skills_premier{
-    width: 30%;
+    width: 70%;
 }
 .skills_office{
     width: 90%;
 }
 .skills_helpdesk{
-    width: 95%;
+    width: 60%;
 }
 .skills_hardware{
     width: 90%;
@@ -530,20 +540,35 @@ img{
     overflow: initial;
 }
 .portfolio_content{
-    padding: 0 1.5rem;
-    box-shadow: 4px 4px 4px rgb(0, 0, 0, .15);
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: var(--background-color-light); /* Add background color */
 }
 .portfolio_img{
-    width: 400 px;
-    border-radius: .6rem;
-    justify-self: center;
+    width: 100%; /* Ensure image fills container */
+    border-radius: 0.5rem; /* Add border radius */
 }
-.portfolio_title{
-    font-size: var(--h3-font-size);
-    margin-bottom: var(--mb-0-5);
+
+.portfolio_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: black;
 }
-.portfolio_description{
-    margin-bottom: var(--mb-0-75);
+.portfolio_description {
+    margin-bottom: 1rem;
+    color: grey;
+}
+.portfolio_button {
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+    border-radius: 0.5rem;
+    background-color: var(--button-color-dark); /* Green color */
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 .portfolio_button:hover .button_icon{
     transform: translateX(.25rem);
@@ -612,29 +637,124 @@ img{
     outline: none;
     padding: .25rem .5rem .5rem 0;
 }
-.footer{
-    padding-top: 2rem;
-}
-.footer_container{
-    row-gap: 3.5rem;
-}
-.footer_bg{
-    background-color: var(--first-color-second);
-    padding: 2rem 0 3rem;
-}
-.footer_title{
-    font-size: var(--h1-font-size);
-    margin-bottom: var(--mb-0-25);
-}
-.footer_subtitle{
-    font-size: var(--small-font-size);
-}
-.footer_title,
-.footer_subtitle{
-    color: #fff;
-    text-align: var(--first-color-alt);
-}
 
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    margin-top: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon,
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon__item,
+  .menu__item {
+    list-style: none;
+  }
+  
+  .social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  .social-icon__link:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+  }
+  
+  .menu__link:hover {
+    opacity: 1;
+  }
+  
+  .footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 7s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
 /* home link */
 .active-link{
     color: var(--first-color);
