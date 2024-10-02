@@ -427,10 +427,19 @@ img{
     background-color: var(--first-color);
 }
 .skills_html{
-    width: 100%;
+    width: 45%;
 }
-.skills_css{
-    width: 85%;
+.skills_react{
+    width: 80%;
+}
+.skills_react-native{
+    width: 35%;
+}
+.skills_vue{
+    width: 80%;
+}
+.skills_nuxt{
+    width: 45%;
 }
 .skills_js{
     width: 80%;
@@ -438,26 +447,44 @@ img{
 .skills_drupal{
     width: 90%;
 }
+.skills_boot{
+    width: 90%;
+}
+.skills_tabler{
+    width: 95%;
+}
 .skills_bootstrap{
-    width: 85%;
+    width: 90%;
 }
 .skills_photoshop{
-    width: 70%;
+    width: 80%;
 }
 .skills_illustrator{
-    width: 65%;
+    width: 80%;
 }
 .skills_premier{
-    width: 70%;
+    width: 50%;
 }
-.skills_office{
-    width: 90%;
-}
-.skills_helpdesk{
+.skills_sql{
     width: 60%;
 }
+.skills_git{
+    width: 80%;
+}
+.skills_ssg{
+    width: 75%;
+}
+.skills_supa{
+    width: 60%;
+}
+.skills_office{
+    width: 35%;
+}
+.skills_helpdesk{
+    width: 35%;
+}
 .skills_hardware{
-    width: 90%;
+    width: 75%;
 }
 .skills_close .skills_list{
     height: 0;
@@ -1003,4 +1030,9 @@ img{
         grid-template-columns: repeat(2, 1fr);
     }
   
+}
+/* Style for the technology badges */
+.portfolio_tech {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
